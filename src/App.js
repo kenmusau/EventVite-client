@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import EventsList from "./components/EventsList";
 import Header from "./components/Header";
+import EventSelected from "./components/EventSelected";
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -32,7 +33,11 @@ function App() {
   return (
     <div className="App bg-slate-50">
       <Header />
-      <EventsList events={events} onSelectedEvent={handleSelectedEvent} />
+      {selectedEvent ? (
+        <EventSelected selectedEvent={selectedEvent} />
+      ) : (
+        <EventsList events={events} onSelectedEvent={handleSelectedEvent} />
+      )}
     </div>
   );
 }
