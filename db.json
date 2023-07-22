@@ -1,0 +1,148 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Theatre of Violence",
+      "description": "At the age of 9, Dominic Ongwen is abducted by the Ugandan LRA, who train him to be a child soldier and place him in a commanding role. Years later, he now faces the International Criminal Court (ICC), but should he be judged for his actions, or is he himself a victim?  ​​WINNER - Grand Jury Prize Movies That Matter",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/tov.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Unseen Mini Mornings",
+      "description": "Our Mini Mornings give smaller kids the chance to experience films on the big screen in a child friendly environment with soft lighting levels and lowered film volume. Mini Mornings are run every Sunday morning at 10am with the first edition on Sunday 21 May. ",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/um.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Clash of Shujaa",
+      "description": "Clash of Shujaa will be a live music event featuring Black Metal band: Chovu Band and grunge icons: Petrika Band. Chovu is a 4 piece metal band that incorporates theatrics based on mysticism and native lore that make their performances a very eccentric experience",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/cos.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Digitisation Forum for MSMEs",
+      "description": "The forum explores and promotes the digitization of Micro, Small, and Medium Enterprises (MSMEs) in Kenya. It seeks to provide a platform for knowledge sharing, collaboration, and capacity building to empower MSMEs to leverage digital technologies for growth and sustainability. ",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/digitization.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Theatre of Violence",
+      "description": "At the age of 9, Dominic Ongwen is abducted by the Ugandan LRA, who train him to be a child soldier and place him in a commanding role. Years later, he now faces the International Criminal Court (ICC), but should he be judged for his actions, or is he himself a victim?  ​​WINNER - Grand Jury Prize Movies That Matter",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/collective.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Unseen Mini Mornings",
+      "description": "Our Mini Mornings give smaller kids the chance to experience films on the big screen in a child friendly environment with soft lighting levels and lowered film volume. Mini Mornings are run every Sunday morning at 10am with the first edition on Sunday 21 May. ",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "venue": "Nairobi Cinema",
+      "price": 650,
+      "image_url": "./assets/ck.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Clash of Shujaa",
+      "description": "Clash of Shujaa will be a live music event featuring Black Metal band: Chovu Band and grunge icons: Petrika Band. Chovu is a 4 piece metal band that incorporates theatrics based on mysticism and native lore that make their performances a very eccentric experience",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/treasure.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Digitisation Forum for MSMEs",
+      "description": "The forum explores and promotes the digitization of Micro, Small, and Medium Enterprises (MSMEs) in Kenya. It seeks to provide a platform for knowledge sharing, collaboration, and capacity building to empower MSMEs to leverage digital technologies for growth and sustainability. ",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "venue": "Nairobi Cinema",
+      "price": 650,
+      "image_url": "./assets/digitization.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Theatre of Violence",
+      "description": "At the age of 9, Dominic Ongwen is abducted by the Ugandan LRA, who train him to be a child soldier and place him in a commanding role. Years later, he now faces the International Criminal Court (ICC), but should he be judged for his actions, or is he himself a victim?  ​​WINNER - Grand Jury Prize Movies That Matter",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/tov.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Unseen Mini Mornings",
+      "description": "Our Mini Mornings give smaller kids the chance to experience films on the big screen in a child friendly environment with soft lighting levels and lowered film volume. Mini Mornings are run every Sunday morning at 10am with the first edition on Sunday 21 May. ",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/um.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Clash of Shujaa",
+      "description": "Clash of Shujaa will be a live music event featuring Black Metal band: Chovu Band and grunge icons: Petrika Band. Chovu is a 4 piece metal band that incorporates theatrics based on mysticism and native lore that make their performances a very eccentric experience",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/cos.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Digitisation Forum for MSMEs",
+      "description": "The forum explores and promotes the digitization of Micro, Small, and Medium Enterprises (MSMEs) in Kenya. It seeks to provide a platform for knowledge sharing, collaboration, and capacity building to empower MSMEs to leverage digital technologies for growth and sustainability. ",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/digitization.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Theatre of Violence",
+      "description": "At the age of 9, Dominic Ongwen is abducted by the Ugandan LRA, who train him to be a child soldier and place him in a commanding role. Years later, he now faces the International Criminal Court (ICC), but should he be judged for his actions, or is he himself a victim?  ​​WINNER - Grand Jury Prize Movies That Matter",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/collective.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Unseen Mini Mornings",
+      "description": "Our Mini Mornings give smaller kids the chance to experience films on the big screen in a child friendly environment with soft lighting levels and lowered film volume. Mini Mornings are run every Sunday morning at 10am with the first edition on Sunday 21 May. ",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "venue": "Nairobi Cinema",
+      "price": 650,
+      "image_url": "./assets/um.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Clash of Shujaa",
+      "description": "Clash of Shujaa will be a live music event featuring Black Metal band: Chovu Band and grunge icons: Petrika Band. Chovu is a 4 piece metal band that incorporates theatrics based on mysticism and native lore that make their performances a very eccentric experience",
+      "venue": "Nairobi Cinema",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "price": 650,
+      "image_url": "./assets/cos.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Digitisation Forum for MSMEs",
+      "description": "The forum explores and promotes the digitization of Micro, Small, and Medium Enterprises (MSMEs) in Kenya. It seeks to provide a platform for knowledge sharing, collaboration, and capacity building to empower MSMEs to leverage digital technologies for growth and sustainability. ",
+      "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
+      "venue": "Nairobi Cinema",
+      "price": 650,
+      "image_url": "./assets/debt.jpg"
+    }
+  ]
+}
