@@ -8,6 +8,13 @@ export default function Login({
 }) {
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-slate-200">
+      <h1 className="text-4xl font-bold mb-8">
+        <span className="font-black text-orange-600  cursor-pointer">
+          ∈√ΞNT
+        </span>
+        <span className="text-black">-VitE </span>
+        Host Dashboard
+      </h1>
       <form
         className="flex flex-col justify-center items-center w-96 bg-white p-6 rounded shadow-md"
         onSubmit={onLoginSubmit}

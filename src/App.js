@@ -10,7 +10,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
-  const [isRegisterForm, setIsRegisterForm] = useState(false); // State to toggle between login and register forms
+  const [isRegisterForm, setIsRegisterForm] = useState(false);
 
   const hosts_url = "http://localhost:9292/hosts";
 
@@ -58,7 +58,7 @@ function App() {
     <div className="App bg-slate-50">
       {isLoggedIn ? (
         <>
-          <Header />
+          <Header isLoggedIn={isLoggedIn} />
           <UserView user={currentUser} />
         </>
       ) : // Conditionally render the Login or Register component based on isRegisterForm state

@@ -1,4 +1,4 @@
-export default function Header({ onHandleLogin, loggedIn }) {
+export default function Header({ onHandleLogin, isLoggedIn }) {
   return (
     <div className="max-w-full  sticky top-0 z-50 bg-slate-50 border-b-2 ">
       <div className="flex justify-between items-center max-w-7xl mx-auto last:p-4  ">
@@ -15,7 +15,7 @@ export default function Header({ onHandleLogin, loggedIn }) {
             className="cursor-pointer hover:text-orange-500 font-extrabold"
             onClick={onHandleLogin}
           >
-            {loggedIn ? "LogOut" : "Log In"}
+            {isLoggedIn ? "LogOut" : "Log In"}
           </button>
         </div>
       </div>

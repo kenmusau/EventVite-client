@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import EventSelected from "./EventSelected";
 import EventsList from "./EventsList";
 
-export default function UserView() {
+export default function UserView({ user }) {
+  console.log(user.id);
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelecteEvent] = useState(null);
 
-  const base_url = "http://localhost:9292/events";
+  const base_url = `http://localhost:9292/events/${user.id}`;
 
   useEffect(() => {
     fetchEvents();
