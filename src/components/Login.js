@@ -1,29 +1,23 @@
-import { useState } from "react";
-
-export default function Login({ onToogleForm }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (!email || !password) return;
-    console.log(email, password);
-    setEmail("");
-    setPassword("");
-  }
-
+export default function Login({
+  onLoginSubmit,
+  onToogleForm,
+  email,
+  password,
+  setEmail,
+  setPassword,
+}) {
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-slate-200">
       <form
         className="flex flex-col justify-center items-center w-96 bg-white p-6 rounded shadow-md"
-        onSubmit={handleSubmit}
+        onSubmit={onLoginSubmit}
       >
         <label htmlFor="email">Email</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="youremail@gmail.com"
+          placeholder="steve@gmail.com"
           name="email"
           id="email"
           className="w-full px-3 py-2 my-1 border rounded"
@@ -34,7 +28,7 @@ export default function Login({ onToogleForm }) {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="********"
+          placeholder="12345"
           name="password"
           id="password"
           className="w-full px-3 py-2 my-1 border rounded"

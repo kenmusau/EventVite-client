@@ -7,6 +7,7 @@ export default function Header({ onHandleLogin, loggedIn }) {
         </h1>
 
         <div className="flex gap-10 ">
+          <h2>Admin Dashboard</h2>
           <button className="cursor-pointer hover:text-orange-500 font-extrabold">
             Create Events
           </button>

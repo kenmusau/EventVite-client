@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-
 import Header from "./components/Header";
-
 import Login from "./components/Login";
 import Register from "./components/Register";
 import UserView from "./components/UserView";
 
 function App() {
-  const [showLogin, setShowLogin] = useState(false);
   const [hosts, setHosts] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isRegisterForm, setIsRegisterForm] = useState(false); // State to toggle between login and register forms
 
-  // const base_url = "http://localhost:3000/events";
   const hosts_url = "http://localhost:9292/hosts";
 
   useEffect(() => {
@@ -28,33 +28,52 @@ function App() {
     }
   }
 
-  console.log(hosts);
+  function handleLoginSubmit(e) {
+    e.preventDefault();
+    if (!email || !password) {
+      console.log("Please enter both email and password.");
+      return;
+    }
 
-  function toggleForm(formName) {
-    setIsLoggedIn(formName);
+    // Check if the logging-in user exists in the hosts array
+    const user = hosts.find((user) => user.email === email);
+    if (!user) {
+      console.log("User does not exist in the hosts array.");
+      setIsRegisterForm(true); // If the user doesn't exist, switch to the register form
+      return;
+    }
+
+    // Check if the password matches the user's password
+    if (user.password !== password) {
+      console.log("Incorrect password.");
+      return;
+    }
+
+    // User login is successful, set the currentUser state
+    setCurrentUser(user);
+    setIsLoggedIn(true); // Set isLoggedIn to true upon successful login
   }
-
-  function handleLogin() {
-    setShowLogin((cur) => !cur);
-  }
-
-  console.log(showLogin);
 
   return (
     <div className="App bg-slate-50">
-      {/* <Header onHandleLogin={handleLogin} loggedIn={showLogin} /> */}
-
-      <Login />
-
-      {/* {showLogin ? (
-        isLoggedIn === "login" ? (
-          <Login onToogleForm={toggleForm} />
-        ) : (
-          <Register onToogleForm={toggleForm} />
-        )
+      {isLoggedIn ? (
+        <>
+          <Header />
+          <UserView user={currentUser} />
+        </>
+      ) : // Conditionally render the Login or Register component based on isRegisterForm state
+      isRegisterForm ? (
+        <Register onToogleForm={() => setIsRegisterForm(false)} />
       ) : (
-        <UserView />
-      )} */}
+        <Login
+          email={email}
+          password={password}
+          onLoginSubmit={handleLoginSubmit}
+          onToogleForm={() => setIsRegisterForm(true)}
+          setEmail={setEmail}
+          setPassword={setPassword}
+        />
+      )}
     </div>
   );
 }
