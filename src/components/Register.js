@@ -4,10 +4,24 @@ export default function Register({ onToogleForm }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  function handleSubmit(e) {
+
+  function handlCreateHost(e) {
     e.preventDefault();
     if (!email || !password) return;
-    console.log(email, password);
+    fetch("http://localhost:9292/hosts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        password: password,
+      }),
+    })
+      .then((resp) => resp.json())
+      .then((host) => console.log(host));
+    setName("");
     setEmail("");
     setPassword("");
   }
@@ -15,14 +29,14 @@ export default function Register({ onToogleForm }) {
     <div className="flex flex-col justify-center items-center h-screen bg-slate-200">
       <form
         className="flex flex-col justify-center items-center w-96 bg-white p-6 rounded shadow-md"
-        onSubmit={handleSubmit}
+        onSubmit={handlCreateHost}
       >
         <label htmlFor="text">Name</label>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="youremail@gmail.com"
+          placeholder="Your name"
           name="name"
           id="name"
           className="w-full px-3 py-2 my-1 border rounded"

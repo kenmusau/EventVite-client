@@ -1,5 +1,6 @@
 export default function EventSelected({ selectedEvent }) {
-  const { id, name, venue, description, date, image_url, time } = selectedEvent;
+  const { id, title, venue, description, date, image_url, time } =
+    selectedEvent;
   console.log(venue);
   return (
     <div className="flex justify-center gap-20 max-w-full h-screen mx-auto 	bg-slate-50">
@@ -14,7 +15,7 @@ export default function EventSelected({ selectedEvent }) {
       </div>
       <div className=" flex flex-col gap-7 max-w-xs pt-10 ">
         <h3 className="text-2xl">
-          Title: <span className="text-orange-500 font-extrabold">{name}</span>{" "}
+          Title: <span className="text-orange-500 font-extrabold">{title}</span>{" "}
         </h3>
         <h4 className="font-bold">
           Date: <span className="italic">{date}</span>

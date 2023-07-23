@@ -7,25 +7,28 @@ import Register from "./components/Register";
 import UserView from "./components/UserView";
 
 function App() {
-  const [events, setEvents] = useState([]);
   const [showLogin, setShowLogin] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState("login");
+  const [hosts, setHosts] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const base_url = "http://localhost:3000/events";
+  // const base_url = "http://localhost:3000/events";
+  const hosts_url = "http://localhost:9292/hosts";
 
   useEffect(() => {
-    fetchEvents();
+    fetchHost();
   }, []);
 
-  async function fetchEvents() {
+  async function fetchHost() {
     try {
-      const response = await fetch(base_url);
-      const events = await response.json();
-      setEvents(events);
+      const resp = await fetch(hosts_url);
+      const hosts = await resp.json();
+      setHosts(hosts);
     } catch (error) {
       console.log("Error fetching data:", error);
     }
   }
+
+  console.log(hosts);
 
   function toggleForm(formName) {
     setIsLoggedIn(formName);
@@ -39,17 +42,19 @@ function App() {
 
   return (
     <div className="App bg-slate-50">
-      <Header onHandleLogin={handleLogin} loggedIn={showLogin} />
+      {/* <Header onHandleLogin={handleLogin} loggedIn={showLogin} /> */}
 
-      {showLogin ? (
+      <Login />
+
+      {/* {showLogin ? (
         isLoggedIn === "login" ? (
           <Login onToogleForm={toggleForm} />
         ) : (
           <Register onToogleForm={toggleForm} />
         )
       ) : (
-        <UserView events={events} />
-      )}
+        <UserView />
+      )} */}
     </div>
   );
 }
