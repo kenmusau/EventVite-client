@@ -58,7 +58,11 @@ function App() {
     <div className="App bg-slate-50">
       {isLoggedIn ? (
         <>
-          <Header isLoggedIn={isLoggedIn} />
+          <Header
+            isLoggedIn={isLoggedIn}
+            user={currentUser}
+            base_url={base_url}
+          />
           <UserView user={currentUser} base_url={base_url} />
         </>
       ) : // Conditionally render the Login or Register component based on isRegisterForm state
