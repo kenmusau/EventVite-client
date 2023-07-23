@@ -16,7 +16,7 @@ export default function Event({ event, onSelectedEvent }) {
       <div className="flex flex-col gap-2">
         <h3 className="text-base font-semibold ">{name}</h3>
         <p className="text-gray-600">{venue}</p>
-        <p className="text-gray-500 text-xs">{date}</p>
+        <p className="text-gray-500 ">{date}</p>
       </div>
     </div>
   );

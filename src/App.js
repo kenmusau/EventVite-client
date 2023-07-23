@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import EventsList from "./components/EventsList";
+
 import Header from "./components/Header";
-import EventSelected from "./components/EventSelected";
+
+import Login from "./components/Login";
+import Register from "./components/Register";
+import UserView from "./components/UserView";
 
 function App() {
   const [events, setEvents] = useState([]);
-  const [selectedEvent, setSelecteEvent] = useState(null);
+  const [showLogin, setShowLogin] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState("login");
 
   const base_url = "http://localhost:3000/events";
 
@@ -23,20 +27,28 @@ function App() {
     }
   }
 
-  function handleSelectedEvent(id) {
-    const event = events.filter((event) => event?.id === id);
-    setSelecteEvent((cur) => event);
+  function toggleForm(formName) {
+    setIsLoggedIn(formName);
   }
 
-  console.log(selectedEvent);
+  function handleLogin() {
+    setShowLogin((cur) => !cur);
+  }
+
+  console.log(showLogin);
 
   return (
     <div className="App bg-slate-50">
-      <Header />
-      {selectedEvent ? (
-        <EventSelected selectedEvent={selectedEvent} />
+      <Header onHandleLogin={handleLogin} loggedIn={showLogin} />
+
+      {showLogin ? (
+        isLoggedIn === "login" ? (
+          <Login onToogleForm={toggleForm} />
+        ) : (
+          <Register onToogleForm={toggleForm} />
+        )
       ) : (
-        <EventsList events={events} onSelectedEvent={handleSelectedEvent} />
+        <UserView events={events} />
       )}
     </div>
   );

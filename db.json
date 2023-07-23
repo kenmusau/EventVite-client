@@ -7,7 +7,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/tov.jpg"
+      "image_url": "./assets/tov.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/cos.jpg"
+      "image_url": "./assets/cos.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 4,
@@ -34,7 +36,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/digitization.jpg"
+      "image_url": "./assets/digitization.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 5,
@@ -43,7 +46,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/collective.jpg"
+      "image_url": "./assets/collective.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 6,
@@ -52,7 +56,8 @@
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "venue": "Nairobi Cinema",
       "price": 650,
-      "image_url": "./assets/ck.jpg"
+      "image_url": "./assets/ck.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 7,
@@ -61,7 +66,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/treasure.jpg"
+      "image_url": "./assets/treasure.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 8,
@@ -70,7 +76,8 @@
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "venue": "Nairobi Cinema",
       "price": 650,
-      "image_url": "./assets/digitization.jpg"
+      "image_url": "./assets/digitization.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 9,
@@ -79,7 +86,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/tov.jpg"
+      "image_url": "./assets/tov.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 10,
@@ -88,7 +96,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/um.jpg"
+      "image_url": "./assets/um.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 11,
@@ -97,7 +106,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/cos.jpg"
+      "image_url": "./assets/cos.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 12,
@@ -106,7 +116,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/digitization.jpg"
+      "image_url": "./assets/digitization.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 13,
@@ -115,7 +126,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/collective.jpg"
+      "image_url": "./assets/collective.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 14,
@@ -124,7 +136,8 @@
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "venue": "Nairobi Cinema",
       "price": 650,
-      "image_url": "./assets/um.jpg"
+      "image_url": "./assets/um.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 15,
@@ -133,7 +146,8 @@
       "venue": "Nairobi Cinema",
       "date": "Sat, Jul 01, 2023 - Mon, Jul 31, 2023",
       "price": 650,
-      "image_url": "./assets/cos.jpg"
+      "image_url": "./assets/cos.jpg",
+      "time": "7:00 pm"
     },
     {
       "id": 16,
