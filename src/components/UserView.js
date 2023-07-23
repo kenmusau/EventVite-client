@@ -2,12 +2,9 @@ import { useState, useEffect } from "react";
 import EventSelected from "./EventSelected";
 import EventsList from "./EventsList";
 
-export default function UserView({ user }) {
-  console.log(user.id);
+export default function UserView({ base_url, user }) {
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelecteEvent] = useState(null);
-
-  const base_url = `http://localhost:9292/events/${user.id}`;
 
   useEffect(() => {
     fetchEvents();
@@ -15,7 +12,7 @@ export default function UserView({ user }) {
 
   async function fetchEvents() {
     try {
-      const response = await fetch(base_url);
+      const response = await fetch(`${base_url}/events/${user.id}`);
       const events = await response.json();
       setEvents(events);
     } catch (error) {
@@ -29,7 +26,7 @@ export default function UserView({ user }) {
   return (
     <div>
       {selectedEvent ? (
-        <EventSelected selectedEvent={selectedEvent} />
+        <EventSelected selectedEvent={selectedEvent} base_url={base_url} />
       ) : (
         <EventsList events={events} onSelectedEvent={handleSelectedEvent} />
       )}

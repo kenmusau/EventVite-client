@@ -1,7 +1,15 @@
-export default function EventSelected({ selectedEvent }) {
+export default function EventSelected({ selectedEvent, base_url }) {
   const { id, title, venue, description, date, image_url, time } =
     selectedEvent;
-  console.log(venue);
+
+  function handleDelete() {
+    fetch(`${base_url}/events/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((event) => console.log(event));
+    console.log(id);
+  }
   return (
     <div className="flex justify-center gap-20 max-w-full h-screen mx-auto 	bg-slate-50">
       <div className="flex flex-col	gap-5 max-w-3xl	pt-5">
@@ -23,12 +31,15 @@ export default function EventSelected({ selectedEvent }) {
         <h4 className="font-bold">Time: {time}</h4>
         <h4 className="font-bold">Venue: {venue}</h4>
         <div className="flex gap-7 font-bold">
-          <button className="rounded-full bg-orange-500 text-white px-6 p-3">
-            Favorite
+          <button
+            onClick={handleDelete}
+            className="rounded-full bg-red-800 text-white px-6 p-3"
+          >
+            Delete
           </button>
-          <button className="rounded-full bg-green-500 text-white px-4 p-3 ">
+          {/* <button className="rounded-full bg-green-500 text-white px-4 p-3 ">
             Buy Ticket
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

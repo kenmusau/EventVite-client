@@ -12,7 +12,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isRegisterForm, setIsRegisterForm] = useState(false);
 
-  const hosts_url = "http://localhost:9292/hosts";
+  const base_url = "http://localhost:9292";
 
   useEffect(() => {
     fetchHost();
@@ -20,7 +20,7 @@ function App() {
 
   async function fetchHost() {
     try {
-      const resp = await fetch(hosts_url);
+      const resp = await fetch(`${base_url}/hosts`);
       const hosts = await resp.json();
       setHosts(hosts);
     } catch (error) {
@@ -59,11 +59,14 @@ function App() {
       {isLoggedIn ? (
         <>
           <Header isLoggedIn={isLoggedIn} />
-          <UserView user={currentUser} />
+          <UserView user={currentUser} base_url={base_url} />
         </>
       ) : // Conditionally render the Login or Register component based on isRegisterForm state
       isRegisterForm ? (
-        <Register onToogleForm={() => setIsRegisterForm(false)} />
+        <Register
+          onToogleForm={() => setIsRegisterForm(false)}
+          base_url={base_url}
+        />
       ) : (
         <Login
           email={email}

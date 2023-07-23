@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Register({ onToogleForm }) {
+export default function Register({ onToogleForm, base_url }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -8,7 +8,7 @@ export default function Register({ onToogleForm }) {
   function handlCreateHost(e) {
     e.preventDefault();
     if (!email || !password) return;
-    fetch("http://localhost:9292/hosts", {
+    fetch(`${base_url}/hosts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
