@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-export default function CreateEvent({ onClose, base_url }) {
+export default function CreateEvent({ onClose, base_url, user }) {
+  const { id } = user;
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -8,6 +9,7 @@ export default function CreateEvent({ onClose, base_url }) {
     date: "",
     time: "",
     venue: "",
+    price: 0,
   });
 
   function handleChange(e) {
@@ -34,6 +36,8 @@ export default function CreateEvent({ onClose, base_url }) {
         date: formData.date,
         time: formData.time,
         venue: formData.venue,
+        price: formData.price,
+        host_id: id,
       }),
     })
       .then((resp) => resp.json())
@@ -46,8 +50,9 @@ export default function CreateEvent({ onClose, base_url }) {
       date: "",
       time: "",
       venue: "",
+      price: 0,
     });
-    console.log(formData);
+    console.log(id);
   }
   return (
     <div className="flex flex-col justify-center items-center ">
@@ -82,6 +87,16 @@ export default function CreateEvent({ onClose, base_url }) {
           name="image_url"
           value={formData.image_url}
           id="image_url"
+          onChange={handleChange}
+          className="w-full px-3 py-2 my-1 border rounded"
+        />
+
+        <label htmlFor="price">Price</label>
+        <input
+          type="number"
+          name="price"
+          value={formData.price}
+          id="price"
           onChange={handleChange}
           className="w-full px-3 py-2 my-1 border rounded"
         />
