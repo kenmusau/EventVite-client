@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Event-VitE Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Event-VitE Admin Dashboard is a web application that allows administrators to manage events. Admins can create, update, and delete events through the user-friendly dashboard.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Create new events with title, description, date, time, and venue.
+- View a list of all events and select a specific event to view its details.
+- Update event details such as title, description, date, time, and venue.
+- Delete events from the dashboard.
+- Responsive design for a seamless user experience on different devices.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: A JavaScript library for building user interfaces.
+- React Router: For handling client-side routing in the application.
+- Tailwind CSS: A utility-first CSS framework for styling the application.
+- PostgreSQL: A powerful open-source relational database management system.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository to your local machine.
+2. Navigate to the project directory and install dependencies by running:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+```
 
-### `npm run build`
+3. Create a PostgreSQL database for the application.
+4. Rename the `.env.example` file to `.env` and fill in your PostgreSQL database credentials.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Start the server by running:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run server
+```
 
-### `npm run eject`
+2. In a separate terminal, start the React development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Access the application in your web browser at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## How to Use
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Login**: Upon accessing the application, you will be redirected to the login page. Enter your credentials to log in as an administrator.
 
-## Learn More
+2. **Dashboard**: After logging in, you will land on the Admin Dashboard. Here, you can see a list of events.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Create Event**: To create a new event, click on the "Create Events" button. A modal will appear, allowing you to input the event details. Click "Create" to save the new event.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **View Event Details**: Click on any event in the list to view its details. Here, you can update the event information or delete the event using the provided options.
 
-### Code Splitting
+5. **Update Event**: To update an event's details, click the "Update" button on the event details page. Make the necessary changes and click "Save" to update the event.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. **Delete Event**: To delete an event, click the "Delete" button on the event details page. Confirm the action, and the event will be permanently deleted.
 
-### Analyzing the Bundle Size
+7. **Logout**: To log out of the application, click the "LogOut" link in the header.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributors
 
-### Making a Progressive Web App
+- [Kennedy Musau](https://github.com/Ken-Musau)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was created by [Kennedy Musau](https://github.com/Ken-Musau)

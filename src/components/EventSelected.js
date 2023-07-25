@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-export default function EventSelected({ selectedEvent, base_url }) {
+export default function EventSelected({
+  selectedEvent,
+  base_url,
+  onBackToEventsList,
+}) {
   const { id, title, venue, description, date, image_url, time } =
     selectedEvent;
   const [isDeleted, setIsDeleted] = useState(false);
@@ -50,7 +54,22 @@ export default function EventSelected({ selectedEvent, base_url }) {
   }
 
   if (isDeleted) {
-    return <div>Event Deleted Successfully!</div>; // or you can redirect to another page
+    // Event Deleted Successfully Message
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <p className="text-2xl font-semibold text-orange-500 mb-4">
+            Event Deleted Successfully!
+          </p>
+          <button
+            className="px-4 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600"
+            onClick={onBackToEventsList}
+          >
+            Back
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -70,8 +89,19 @@ export default function EventSelected({ selectedEvent, base_url }) {
         </div>
       </div>
       <div className=" flex flex-col gap-7 max-w-xs pt-10 ">
+        <ul>
+          <li>
+            {/* Use the callback function to navigate back to the events list (dashboard) */}
+            <span
+              className="cursor-pointer inline-block px-4 py-2 bg-orange-500 text-white font-semibold rounded hover:bg-orange-600"
+              onClick={onBackToEventsList}
+            >
+              Back
+            </span>
+          </li>
+        </ul>
         <h3 className="text-2xl">
-          Title:{" "}
+          Title:
           <input
             type="text"
             value={updatedTitle}

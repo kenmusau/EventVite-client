@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Register({ onToogleForm, base_url }) {
   const [email, setEmail] = useState("");
@@ -75,12 +76,14 @@ export default function Register({ onToogleForm, base_url }) {
           Sign Up
         </button>
       </form>
-      <button
-        onClick={() => onToogleForm("login")}
-        className="mt-4 text-sm text-orange-600 hover:text-blue-800 focus:outline-none font-extrabold"
-      >
-        Already have an account? Login here.
-      </button>
+      <ul>
+        <li
+          onClick={() => onToogleForm("login")}
+          className="mt-4 text-sm text-orange-600 hover:text-blue-800 focus:outline-none font-extrabold"
+        >
+          <Link to="/">Already have an account? Login here</Link>
+        </li>
+      </ul>
     </div>
   );
 }

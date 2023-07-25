@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CreateEvent from "./CreateEvent"; // Import the CreateEvent component
 
-export default function Header({ onHandleLogin, isLoggedIn, user, base_url }) {
+export default function Header({ onHandleLogout, user, base_url }) {
   const [isCreateEventOpen, setIsCreateEventOpen] = useState(false);
 
   // Function to toggle the visibility of the CreateEvent modal
@@ -18,18 +19,34 @@ export default function Header({ onHandleLogin, isLoggedIn, user, base_url }) {
 
         <div className="flex gap-10 ">
           <h2>Admin Dashboard</h2>
+
+          <ul>
+            <li className="cursor-pointer hover:text-orange-500 font-extrabold">
+              <Link to="/dashboard">Your Events</Link>
+            </li>
+          </ul>
+
           <button
             className="cursor-pointer hover:text-orange-500 font-extrabold"
             onClick={toggleCreateEventModal} // Open the CreateEvent modal when this button is clicked
           >
             Create Events
           </button>
-          <button
+
+          <ul>
+            <li
+              className="cursor-pointer hover:text-orange-500 font-extrabold"
+              onClick={onHandleLogout}
+            >
+              <Link to="/">LogOut</Link>
+            </li>
+          </ul>
+          {/* <button
             className="cursor-pointer hover:text-orange-500 font-extrabold"
             onClick={onHandleLogin}
           >
-            {isLoggedIn ? "LogOut" : "Log In"}
-          </button>
+            LogOut
+          </button> */}
         </div>
       </div>
 

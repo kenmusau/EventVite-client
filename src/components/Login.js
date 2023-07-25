@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Login({
   onLoginSubmit,
   onToogleForm,
@@ -45,13 +46,14 @@ export default function Login({
           Log in
         </button>
       </form>
-
-      <button
-        onClick={() => onToogleForm("register")}
-        className="mt-4 text-sm text-orange-600 hover:text-blue-800 focus:outline-none font-extrabold"
-      >
-        Don't have an account? Register here.
-      </button>
+      <ul>
+        <li
+          onClick={() => onToogleForm("login")}
+          className="mt-4 text-sm text-orange-600 hover:text-blue-800 focus:outline-none font-extrabold"
+        >
+          <Link to="/register">Already have an account? Login here</Link>
+        </li>
+      </ul>
     </div>
   );
 }
