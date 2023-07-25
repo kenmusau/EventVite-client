@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import CreateEvent from "./CreateEvent"; // Import the CreateEvent component
-
+import CreateEvent from "./CreateEvent";
 export default function Header({ onHandleLogout, user, base_url }) {
   const [isCreateEventOpen, setIsCreateEventOpen] = useState(false);
 
-  // Function to toggle the visibility of the CreateEvent modal
   const toggleCreateEventModal = () => {
     setIsCreateEventOpen((prev) => !prev);
   };
@@ -28,7 +26,7 @@ export default function Header({ onHandleLogout, user, base_url }) {
 
           <button
             className="cursor-pointer hover:text-orange-500 font-extrabold"
-            onClick={toggleCreateEventModal} // Open the CreateEvent modal when this button is clicked
+            onClick={toggleCreateEventModal}
           >
             Create Events
           </button>
@@ -41,16 +39,9 @@ export default function Header({ onHandleLogout, user, base_url }) {
               <Link to="/">LogOut</Link>
             </li>
           </ul>
-          {/* <button
-            className="cursor-pointer hover:text-orange-500 font-extrabold"
-            onClick={onHandleLogin}
-          >
-            LogOut
-          </button> */}
         </div>
       </div>
 
-      {/* Render the CreateEvent modal if isCreateEventOpen is true */}
       {isCreateEventOpen && (
         <div className="fixed inset-0 flex justify-center items-center bg-opacity-50 bg-black">
           <div className="bg-white p-6 rounded shadow-md">

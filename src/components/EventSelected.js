@@ -91,7 +91,6 @@ export default function EventSelected({
       <div className=" flex flex-col gap-7 max-w-xs pt-10 ">
         <ul>
           <li>
-            {/* Use the callback function to navigate back to the events list (dashboard) */}
             <span
               className="cursor-pointer inline-block px-4 py-2 bg-orange-500 text-white font-semibold rounded hover:bg-orange-600"
               onClick={onBackToEventsList}

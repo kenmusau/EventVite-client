@@ -41,8 +41,6 @@ function App() {
     const user = hosts.find((user) => user.email === email);
     if (!user) {
       console.log("User does not exist in the hosts array.");
-      localStorage.setItem("isRegisterForm", JSON.stringify(true)); // Store the value in localStorage
-
       return;
     }
 
@@ -54,19 +52,16 @@ function App() {
 
     // User login is successful, set the currentUser state
     setCurrentUser(user);
-    setIsLoggedIn(true); // Set isLoggedIn to true upon successful login
+    setIsLoggedIn(true);
     navigate("/dashboard");
   }
 
   // Function to handle the logout action
   const handleLogout = () => {
-    // Clear user-related data and log the user out
     setIsLoggedIn(false);
     setCurrentUser(null);
     setEmail("");
     setPassword("");
-    // Add any other logout actions you need here
-    // For example, clearing local storage, resetting tokens, etc.
   };
 
   return (
@@ -87,8 +82,7 @@ function App() {
               </>
             }
           />
-        ) : // Conditionally render the Login or Register component based on isRegisterForm state
-        isRegisterForm ? (
+        ) : isRegisterForm ? (
           <Route
             path="/register"
             element={
