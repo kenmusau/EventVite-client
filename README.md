@@ -2,6 +2,10 @@
 
 Event-VitE Admin Dashboard is a web application that allows administrators to manage events. Admins can create, update, and delete events through the user-friendly dashboard.
 
+## Backend
+
+Find the backend link: https://github.com/Ken-Musau/EventVite-server
+
 ## Features
 
 - Create new events with title, description, date, time, and venue.

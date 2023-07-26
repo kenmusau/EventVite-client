@@ -8,7 +8,7 @@ export default function UserView({ base_url, user }) {
 
   useEffect(() => {
     fetchEvents();
-  }, []);
+  }, [events]);
 
   async function fetchEvents() {
     try {
